@@ -1,0 +1,126 @@
+/* Container for the advertisement management */
+.adv-management-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.adv-section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+/* Unique styles for buttons */
+.adv-main-button,
+.adv-modal-btn {
+  background-color: #002B7F !important;
+  margin-bottom: 10px !important;
+  border: none;
+  padding: 10px 15px !important;
+  cursor: pointer;
+  margin-right: 5px;
+  color: white !important; /* White text on the buttons */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.adv-main-button:hover,
+.adv-modal-btn:hover {
+  background-color: #021e55;
+}
+
+.ad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ad-card {
+  width: fit-content;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+}
+
+.ad-preview {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ad-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adv-edit-btn,
+.adv-delete-btn {
+  background-color: #002B7F; /* Button background color */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: white; /* White text for the buttons */
+  padding: 5px 10px;
+  border-radius: 4px; /* Rounded corners */
+}
+
+.adv-edit-btn:hover {
+  background-color: green;
+}
+
+.adv-delete-btn:hover {
+  background-color: red;
+}
+
+/* Modal custom styling */
+.adv-react-modal {
+  width: 400px; /* Modal width */
+  max-width: 80%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  position: relative;
+}
+
+.adv-react-modal h2 {
+  margin-top: 0;
+}
+
+.adv-react-modal input,
+.adv-react-modal select {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.adv-image-preview {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+button.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent !important;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+}

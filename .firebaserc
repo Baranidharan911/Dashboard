@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "techwiz-app-ec16f"
+  },
+  "targets": {},
+  "etags": {
+    "techwiz-app-ec16f": {
+      "extensionInstances": {}
+    }
+  },
+  "dataconnectEmulatorConfig": {}
+}

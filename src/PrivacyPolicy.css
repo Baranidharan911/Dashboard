@@ -1,0 +1,103 @@
+/* Container for Privacy Policy page */
+.privacy-policy-page {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Banner Section */
+  .privacy-banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Content Styling */
+  .privacy-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .privacy-content h1 {
+    color: #002b7f;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .privacy-content h2 {
+    color: #f47923;
+    margin-top: 30px;
+  }
+  
+  .privacy-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .privacy-content p,
+  .privacy-content li {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-content a {
+    color: #002b7f;
+    text-decoration: none;
+  }
+  
+  .privacy-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  
+  /* Mobile styles for smaller screens */
+  @media (max-width: 768px) {
+    .privacy-content {
+      padding: 10px; /* Reduce padding for mobile */
+    }
+  
+    .privacy-content h1 {
+      font-size: 28px; /* Smaller title font for mobile */
+    }
+  
+    .privacy-content h2 {
+      font-size: 22px; /* Smaller section heading for mobile */
+      margin-top: 20px;
+    }
+  
+    .privacy-content p,
+    .privacy-content li {
+      font-size: 16px; /* Adjust text size for readability on mobile */
+    }
+  
+    /* Add some space between the sections */
+    .privacy-content h2 {
+      margin-top: 25px;
+    }
+  
+    /* Adjust padding around lists */
+    .privacy-content ul {
+      padding-left: 15px;
+    }
+  }
+  
+  /* Large screens and desktops */
+  @media (min-width: 769px) {
+    .privacy-content h1 {
+      font-size: 36px;
+    }
+  
+    .privacy-content h2 {
+      font-size: 24px;
+    }
+  
+    .privacy-content p,
+    .privacy-content li {
+      font-size: 18px;
+    }
+  }
+  

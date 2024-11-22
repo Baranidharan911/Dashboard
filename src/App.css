@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffffff 85%);
+}
+
+.group {
+  position: relative;
+}
+
+#myInput:focus::-webkit-input-placeholder {
+  visibility: hidden;
+}
+
+#myInput {
+  padding: 10px;
+  padding-right: 100px;
+  border-radius: 5px;
+  border: 2px solid dodgerblue;
+  outline: none;
+}
+
+#myInput:focus {
+  border: 2px solid dodgerblue;
+  border-radius: 3px;
+}
+
+#myInput-label {
+  display: none;
+  font-size: 11px;
+  color: dodgerblue;
+  font-family: sans-serif;
+  background-color: #fff;
+  padding: 0 3px;
+}
+
+/* Style of label when input is focused */
+#myInput:focus+#myInput-label {
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  top: -5px;
+}
+
+/* General content wrapper styles */
+.content {
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+  /* Default margin for mobile view */
+}
+
+/* Specific content adjustments for mobile view */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+  }
+
+  .mobileSidebar.open~.content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileSidebar.open~.content {
+    margin-left: 180px;
+  }
+}

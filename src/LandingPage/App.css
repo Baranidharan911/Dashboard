@@ -1,0 +1,366 @@
+/* General Styles */
+.landing-page{
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden !important; /* Prevent horizontal scrolling */
+}
+
+/* Header and Navbar Styles */
+header {
+  background-color: #333;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Footer Styles for desktop view */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Add space between the text links */
+}
+
+.footer-link {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Desktop Navbar */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 14px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: -25px; /* Adjust to move the dropdown slightly to the left */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: all 0.3s ease-in-out; /* Smooth transition for dropdown opening */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Scrollable Content Styles */
+.scroll-container {
+  display: flex;
+  overflow: hidden; /* Hide any overflow */
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+/* Cards Styles */
+.cards {
+  display: flex;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.card-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+  height: 240px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.card p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  width: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Mobile Menu and Responsive Styles */
+@media (max-width: 768px) {
+  .landing-page {
+    overflow-x: hidden;
+  }
+
+  .about-us-img {
+    flex: 1 !important;
+    max-width: 90% !important;
+    padding: 0px !important;
+  }
+
+  /* Hide nav-links by default on mobile */
+  .nav-links {
+    display: none !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 100px !important;
+    right: 0 !important;
+    background-color: #002bb7 !important;
+    width: 200px !important;
+    height: 100vh !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding-top: 20px !important;
+    transition: all 0.3s ease-in-out; /* Smooth transition for menu opening */
+  }
+
+  /* Show nav-links when the menu is open */
+  .nav-links.open {
+    display: flex !important;
+  }
+
+  /* Display the hamburger icon on mobile and move it slightly to the left */
+  .mobile-menu-icon {
+    display: block !important;
+    color: #fff !important;
+    font-size: 30px !important;
+    cursor: pointer !important;
+    position: relative;
+    left: -10px; /* Move it slightly to the left */
+  }
+
+  .vision-mission {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    flex-direction: column;
+  }
+
+  #vis {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #mis {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #cont {
+    width: 100%;
+    margin-right: 120px;
+  }
+
+  .download-app h2 {
+    font-size: 42px !important;
+    margin-bottom: 30px;
+    color: #F47923;
+    text-align: center;
+    margin-left: 0px !important;
+  }
+
+  .footer-links .footer-text {
+    display: none;
+  }
+
+  .footer-links .social-icon {
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+    margin-right: 15px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Adjust navbar for mobile layout */
+  .navbar {
+    justify-content: space-between !important;
+  }
+
+  /* Hide mobile-menu-icon in desktop view */
+  .mobile-menu-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-icon {
+    display: none !important;
+  }
+}
+
+/* Ensure the below content adjusts when the dropdown is open */
+.dropdown-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 10px;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 60px;
+  transition: margin-top 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* About Us Section */
+.about-us {
+  padding: 50px 20px;
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-us-img {
+  max-width: 100%;
+  flex: 1;
+  padding: 20px;
+}
+
+.about-us-img img {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mobile View - Reorder the about-us section */
+@media (max-width: 768px) {
+  .about-us-container {
+    flex-direction: column;
+  }
+
+  .help-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease;
+    flex-direction: column;
+  }
+
+  #help {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .about-us-text {
+    order: 1; /* Content at the top */
+    padding-bottom: 20px;
+  }
+
+  .about-us-img {
+    max-width: 100%;
+    order: 2; /* Image at the bottom */
+  }
+}
+}
+/* Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

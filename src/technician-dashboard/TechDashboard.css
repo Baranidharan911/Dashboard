@@ -1,0 +1,435 @@
+/* Base styles for the dashboard */
+.carousel-container {
+    margin-bottom: 20px;
+}
+
+.ad-poster {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.stats-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.table-chart-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.table-wrapper {
+    width: 70%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.th {
+    padding: 12px;
+    text-align: left;
+    background-color: #002B7F;
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid #ccc;
+}
+
+.td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.no-data-td {
+    text-align: center;
+    padding: 100px 12px;
+    color: #888;
+}
+
+.reply-button,
+.accept-button,
+.reject-button {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reply-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.accept-button {
+    background-color: #28a745;
+    color: #fff;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+.reject-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.send-icon {
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.status-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: default;
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    margin-top: 5px;
+}
+
+.status-text {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Specific color for different statuses */
+.status-text.pending {
+    background-color: #fec53d;
+    color: white;
+}
+
+.status-text.in-process {
+    background-color: #4763E4;
+    color: white;
+}
+
+.status-text.completed {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-text.dropped {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Earnings and ratings container styles */
+.earnings-container,
+.ratings-container {
+    width: 100%;
+    height: 125px;
+    padding: 15px 10px 5px 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 8%;
+    margin-bottom: 5px;
+}
+
+.rating-header {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Open Sans';
+}
+
+.rating-item {
+    margin-bottom: 20px;
+}
+
+.star-container {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    justify-content: center;
+}
+
+.rating-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f5a623;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stars {
+    display: flex;
+    padding: 0 0 15px 15px;
+}
+
+.star-filled,
+.star-half-filled,
+.star-empty {
+    font-size: 30px;
+    color: #f5a623;
+}
+
+.earnings-display {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 28%;
+    margin: 0;
+}
+
+.date-time-picker-text-field {
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.no-data-container {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+}
+
+/* LED Indicators with Pulse Effect */
+.led-box {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.led-green {
+    background-color: #ABFF00;
+    box-shadow: 0px 0px 10px #ABFF00;
+    animation: pulseGreen 1.5s infinite;
+}
+
+.led-yellow {
+    background-color: #FFEB3B;
+    box-shadow: 0px 0px 10px #FFEB3B;
+    animation: pulseYellow 1.5s infinite;
+}
+
+.led-red {
+    background-color: #F44336;
+    box-shadow: 0px 0px 10px #F44336;
+    animation: pulseRed 1.5s infinite;
+}
+
+.led-blue {
+    background-color: #2196F3;
+    box-shadow: 0px 0px 10px #2196F3;
+    animation: pulseBlue 1.5s infinite;
+}
+
+/* Keyframes for Pulse Effect */
+@keyframes pulseGreen {
+    0% {
+        box-shadow: 0 0 10px #ABFF00;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #ABFF00, 0 0 30px #ABFF00;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #ABFF00;
+    }
+}
+
+@keyframes pulseYellow {
+    0% {
+        box-shadow: 0 0 10px #FFEB3B;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #FFEB3B, 0 0 30px #FFEB3B;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #FFEB3B;
+    }
+}
+
+@keyframes pulseRed {
+    0% {
+        box-shadow: 0 0 10px #F44336;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #F44336, 0 0 30px #F44336;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #F44336;
+    }
+}
+
+@keyframes pulseBlue {
+    0% {
+        box-shadow: 0 0 10px #2196F3;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #2196F3, 0 0 30px #2196F3;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #2196F3;
+    }
+}
+
+/* Responsive Styles for Mobile View */
+@media (max-width: 768px) {
+    .stats-container {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .carousel-container {
+        margin-bottom: 15px;
+    }
+
+    .ad-poster {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .table-chart-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+
+    .th,
+    .td {
+        padding: 10px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .no-data-td {
+        text-align: center;
+        padding: 100px 12px;
+        color: #888;
+    }
+
+    .sidebar {
+        margin-top: 5px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .ratings-container,
+    .earnings-container {
+        margin-top: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .rating-header,
+    .earnings-header {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .rating-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .stars {
+        margin-top: 5px;
+    }
+
+    .star-filled,
+    .star-half-filled,
+    .star-empty {
+        font-size: 20px;
+    }
+
+    .earnings-display {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .accept-button span,
+    .reject-button span,
+    .reply-button span {
+        display: none;
+    }
+
+    .icon-only {
+        font-size: 24px;
+    }
+
+    /* LED Status Lights in Mobile View */
+    .led-box {
+        display: block;
+    }
+
+    .status-text {
+        display: none;
+        /* Hide text status in mobile view */
+    }
+}
+
+/* Desktop View - Show Status Text */
+@media (min-width: 769px) {
+    .led-box {
+        display: none;
+        /* Hide LED lights in desktop view */
+    }
+
+    .status-text {
+        display: block;
+        /* Show status text in desktop view */
+    }
+}
